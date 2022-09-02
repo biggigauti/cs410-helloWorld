@@ -13,7 +13,7 @@
     </target>
 
     <target name="jar" depends="init,compile">
-        <jar destfile="${dist}/helloWorld.jar" basedir="${dist}/classes">
+        <jar destfile="${dist}/Hello.jar" basedir="${dist}/classes">
             <manifest>
                 <attribute name="Main-Class" value="Hello"/>
             </manifest>
@@ -21,7 +21,7 @@
     </target>
 
     <target name="run" depends="jar">
-        <java jar="${dist}/helloWorld.jar" fork="true"/>
+        <java jar="${dist}/Hello.jar" fork="true"/>
     </target>
 
     <target name="clean">
